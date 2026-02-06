@@ -10,7 +10,6 @@ import Vlogs from "@/components/Vlogs";
 import FAQSection from "@/components/FAQSection";
 import VisitUs from "@/components/VisitUs";
 import Link from "next/link";
-import Footer from "@/components/Footer";
 import { IconBrandWhatsappFilled } from "@tabler/icons-react";
 import Navbar from "@/components/Navbar";
 
@@ -98,7 +97,6 @@ export default function Home() {
           <IconBrandWhatsappFilled size={26} />
         </Link>
 
-        <Footer />
     </main>
   );
 }

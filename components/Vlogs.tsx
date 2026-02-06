@@ -114,11 +114,10 @@ export default function VlogsSection() {
           ))}
           
         </div>
-        {/* Desktop CTA */}
         <div className="mt-12 md:mt-16 lg:mt-20 hidden md:flex justify-end">
           <Link
             href="/vlogs"
-            className="inline-flex items-center gap-2 text-xs md:text-sm font-medium px-4 md:px-6 py-2 md:py-3 bg-[#6a6f3c] text-[#F8F7F4] border border-[#434a03] rounded-xl md:rounded-2xl hover:bg-[#585C32] hover:text-white transition"
+            className="inline-flex items-center gap-2 text-xs md:text-sm font-medium px-4 md:px-6 py-2 md:py-3 bg-[#886c46] text-[#F8F7F4] border border-[#434a03] rounded-xl md:rounded-2xl hover:bg-[#886c46d0] hover:text-white transition"
           >
             View all vlogs <ArrowRight size={16} />
           </Link>

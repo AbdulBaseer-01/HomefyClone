@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 
 const bricolage = Bricolage_Grotesque({
@@ -119,6 +121,7 @@ export default function RootLayout({
       <body
         className={`antialiased ${bricolage.className} bg-[#efede8] text-[#1c1c1c]`}
       >
+        <Navbar />
       <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -159,7 +162,7 @@ export default function RootLayout({
 
         {children}
 
-        
+        <Footer />
       </body>
     </html>
   );

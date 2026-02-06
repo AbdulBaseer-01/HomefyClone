@@ -1,6 +1,4 @@
-"use client";
 
-import Navbar from "@/components/Navbar";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -31,7 +29,7 @@ const SERVICES = [
 export default function ServicesPage() {
   return (
     <main className="bg-[#F8F7F4] text-[#1C1C1C]">
-      <Navbar />
+      
         <section className="relative md:px-8 px-2 md:py-34 h-screen flex items-center justify-center border-b border-[#D6D3CC] overflow-hidden">
             
             <div className="absolute inset-0">
@@ -42,11 +40,11 @@ export default function ServicesPage() {
                 className="object-cover"
                 priority
                 />
-                <div className="absolute inset-0 bg-black/50" />
+                <div className="absolute inset-0 bg-black/70" />
             </div>
 
-            <div className="relative z-10 max-w-5xl h-[50%] mt-10 flex flex-col items-center justify-center py-12 px-2 md:px-6 rounded-lg text-center text-white">
-                <p className="text-sm uppercase tracking-widest text-[#ffffff] text-shadow-[#6A6F3C] text-shadow-2xl mb-6">
+            <div className="relative z-10 max-w-5xl h-[50%] mt-10 flex flex-col items-center justify-center py-12 px-2 md:px-6 rounded-lg text-center text-[white]">
+                <p className="text-sm uppercase tracking-widest text-[#886c46] text-shadow-[rgb(247,193,117)] text-shadow-2xl mb-6 font-extrabold">
                 Our Services
                 </p>
 
@@ -56,7 +54,7 @@ export default function ServicesPage() {
                 designed for real living
                 </h1>
 
-                <p className="text-white/80 max-w-2xl text-center text-lg">
+                <p className="text-[#886c46] max-w-2xl text-center text-lg">
                 From design to execution, we provide reliable, transparent,
                 and high-quality interior services tailored to Indian homes
                 and businesses.
@@ -86,28 +84,28 @@ export default function ServicesPage() {
         </div>
 
         <div className="max-w-lg">
-          <p className="text-xs uppercase tracking-widest text-[#6A6F3C] mb-3">
+          <p className="text-xs uppercase tracking-widest text-[#886c46] mb-3">
             Service
           </p>
 
-          <h2 className="text-3xl font-semibold text-[#1C1C1C] mb-4">
+          <h2 className="text-3xl font-semibold text-[#886c46] mb-4">
             {service.title}
           </h2>
 
-          <p className="text-[#4F4F4F] text-base mb-4 leading-relaxed">
+          <p className="text-[#000000] text-base mb-4 leading-relaxed">
             Designed to balance functionality, aesthetics, and long-term
             comfort for modern living spaces.
           </p>
 
-          <p className="text-[#6B6B6B] text-sm mb-7 leading-relaxed">
+          <p className="text-[#000010] text-sm mb-7 leading-relaxed">
             {service.desc}
           </p>
 
           <Link
             href="/contact"
             className="inline-flex items-center px-6 py-3 rounded-lg
-                       bg-[#6A6F3C] text-[#F8F7F4] text-sm
-                       hover:bg-[#585C32] transition"
+                       bg-[#886c46] text-[#F8F7F4] text-sm
+                       hover:bg-[#886c46d0] transition"
           >
             Enquire Now
           </Link>
@@ -117,7 +115,7 @@ export default function ServicesPage() {
   </div>
 
   <div className="mt-24 text-center">
-    <p className="text-xs uppercase tracking-widest text-[#6a6f3c] mb-2">
+    <p className="text-xs uppercase tracking-widest text-[#886c46] mb-2">
       Explore more
     </p>
 
@@ -128,8 +126,8 @@ export default function ServicesPage() {
     <Link
       href="/products"
       className="inline-flex items-center gap-2 px-7 py-3 rounded-xl 
-                 bg-[#6a6f3c] text-[#F8F7F4] text-sm
-                 hover:bg-[#585C32] transition"
+                 bg-[#886c46] text-[#F8F7F4] text-sm
+                 hover:bg-[#886c46d0] transition"
     >
       View All Products <ArrowRight size={14} />
     </Link>

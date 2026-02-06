@@ -58,6 +58,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { Playfair_Display } from "next/font/google";
+
+const playfair = Playfair_Display({ subsets: ["latin"] });
 
 const BLOGS = [
   {
@@ -88,10 +91,10 @@ export default function BlogsSection() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-8 md:mb-16">
           <div>
-            <p className="text-xs md:text-sm uppercase tracking-widest text-[#6a6f3c] mb-2 md:mb-3">
+            <p className="text-xs md:text-sm uppercase tracking-widest text-[#886c46] mb-2 md:mb-3">
               Blogs
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className={`${playfair.className} text-4xl md:text-6xl font-semibold pb-4 bg-linear-to-r from-black via-[#886c46] to-black bg-clip-text text-transparent mb-4`}>
               Thoughts, stories
               <br />
               & insights
@@ -125,14 +128,13 @@ export default function BlogsSection() {
               </Link>
               <Link
                 href="/blogs"
-                className="hidden md:inline-flex items-center gap-2 text-sm w-fit font-medium text-center px-4 md:px-6 py-2 md:py-3 bg-[#6a6f3c] text-[#F8F7F4] border border-[#434a03] rounded-xl md:rounded-2xl hover:bg-[#585C32] hover:text-white transition"
+                className="hidden md:inline-flex items-center gap-2 text-sm w-fit font-medium text-center px-4 md:px-6 py-2 md:py-3 bg-[#886c46] text-[#F8F7F4] border border-[#886c46] rounded-xl md:rounded-2xl hover:bg-[#585C32] hover:text-white transition"
               >
                 View all blogs <ArrowRight size={16} />
               </Link>
             </div>
           ))}
 
-          {/* Secondary */}
           <div className="w-full lg:flex-1 flex flex-col gap-4 md:gap-8">
             {BLOGS.filter((b) => !b.featured).map((blog, i) => (
               <Link
@@ -162,7 +164,6 @@ export default function BlogsSection() {
           </div>
         </div>
 
-        {/* Mobile CTA */}
         <div className="mt-12 md:mt-0 text-center md:hidden">
           <Link
             href="/blogs"

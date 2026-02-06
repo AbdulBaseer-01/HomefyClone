@@ -87,7 +87,7 @@ export default function OurPortfolio() {
           transition={{ duration: 0.9, ease: "easeOut" }}
           className="mb-16 max-w-3xl"
         >
-          <p className="uppercase tracking-widest text-sm text-[#6A6F3C] mb-3">
+          <p className="uppercase tracking-widest text-sm text-[#886c46] mb-3">
             Our Portfolio
           </p>
           <h2 className={`${playfair.className} text-4xl md:text-6xl font-semibold bg-linear-to-r from-black via-[#886c46] to-black bg-clip-text text-transparent mb-4`}>

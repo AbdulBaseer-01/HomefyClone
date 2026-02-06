@@ -44,7 +44,7 @@ export default function OurServices() {
   return (
     <motion.section
   initial={{ backgroundColor: "#f8f7f4" }}
-  whileInView={{ backgroundColor: "#4c442a" }}
+  whileInView={{ backgroundColor: "#886c46" }}
   viewport={{
     amount: 0.15, 
     once: false
@@ -53,7 +53,7 @@ export default function OurServices() {
     duration: 1,
     ease: "easeInOut"
   }}
-  className="min-h-screen"
+  className="min-h-screen "
 >
 
 
@@ -70,7 +70,7 @@ export default function OurServices() {
             Services
           </p>
 
-          <h2 className={`${playfair.className} text-4xl md:text-6xl font-semibold bg-linear-to-r from-white via-[#886c46] to-white bg-clip-text text-transparent mb-4`}>
+          <h2 className={`${playfair.className} text-4xl md:text-6xl font-semibold bg-linear-to-r from-[#f8f7f4] via-[#e2bb83] to-[#f8f7f4] bg-clip-text text-transparent mb-4`}>
             What we design
             <br /> and deliver
           </h2>
@@ -155,9 +155,12 @@ export default function OurServices() {
           <Link
             href="/services"
             className="inline-flex items-center gap-2 px-6 md:px-10 py-3 md:py-4 rounded-xl md:rounded-2xl 
-                       bg-[#f8f7f4] text-[#6a6f3c]
-                       border border-[#a6ab7a]
-                       hover:bg-[#e9efb3] transition text-sm md:text-base"
+           text-[#000000]
+           bg-[#e2bb83]
+           border border-[#e2bb83]
+           hover:bg-[#e2bb83]/70 hover:border-[#f8f7f4]
+           transition text-sm md:text-base"
+
           >
             View All Services <ArrowRight size={16} />
           </Link>

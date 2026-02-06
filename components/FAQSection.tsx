@@ -4,6 +4,10 @@ import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
+import { Playfair_Display } from "next/font/google";
+
+const playfair = Playfair_Display({ subsets: ["latin"] });
+
 const faqs = [
   {
     q: "How long does a complete home interior project take?",
@@ -41,11 +45,11 @@ export default function FAQSection() {
           transition={{ duration: 0.6 }}
           className="max-w-2xl mb-16"
         >
-          <p className="text-xs uppercase tracking-widest text-black/50 mb-4">
+          <p className="text-xs uppercase tracking-widest text-[#886c46] mb-4">
             FAQs
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-semibold text-black leading-tight mb-6">
+          <h2 className={`${playfair.className} text-4xl md:text-6xl font-semibold pb-4 bg-linear-to-r from-black via-[#886c46] to-black bg-clip-text text-transparent mb-4`}>
             Questions we’re
             <br />
             commonly asked
@@ -65,7 +69,7 @@ export default function FAQSection() {
               <motion.div
                 key={index}
                 initial={false}
-                className="border border-black/10 bg-[#6a6f3c73] rounded-2xl overflow-hidden"
+                className="border border-black/10 bg-[#886c46d0] rounded-2xl overflow-hidden"
               >
                 <button
                   onClick={() =>

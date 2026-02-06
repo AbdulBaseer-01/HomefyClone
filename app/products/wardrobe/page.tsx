@@ -12,13 +12,12 @@ import {
   ArrowLeft,
   Maximize2,
 } from "lucide-react";
-import Navbar from "@/components/Navbar";
 
 const WHATSAPP_NUMBER = "8317539715";
 const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 const PRODUCT = {
-  name: "Luxury Modular Bed",
+  name: "Wardrobe",
   price: "₹1,45,000",
   description: `
 This premium modular bed is designed for modern Indian homes.
@@ -63,9 +62,8 @@ export default function ProductPage() {
 
   return (
     <section className="px-6 py-28 md:mt-12 bg-[#F8F7F4]">
-      <Navbar />
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 md:gap-16 gap-8">
-        <h1 className="text-4xl font-semibold block md:hidden">
+        <h1 className="text-4xl font-semibold block md:hidden text-[#886c46]">
             {PRODUCT.name}
           </h1>
         <div className="relative">
@@ -142,15 +140,15 @@ export default function ProductPage() {
             </div>
           </div>
         <div>
-          <h1 className="text-4xl font-semibold mb-4 hidden md:block">
+          <h1 className="text-4xl font-semibold mb-4 hidden md:block text-[#886c46]">
             {PRODUCT.name}
           </h1>
 
-          <p className="text-[#6B6B6B] whitespace-pre-line mb-6">
+          <p className="text-[#000010] whitespace-pre-line mb-6">
             {PRODUCT.description}
           </p>
 
-          <p className="text-2xl font-medium text-[#6A6F3C] mb-8">
+          <p className="text-2xl font-medium text-[#886c46] mb-8">
             {PRODUCT.price}
           </p>
 
@@ -197,7 +195,7 @@ export default function ProductPage() {
         <Link
           href="/products"
           className="inline-flex items-center gap-2
-                     bg-[#6A6F3C] text-white
+                     bg-[#886c46] text-white
                      px-5 py-3 rounded-xl text-sm"
         >
           <ArrowLeft size={16} />
@@ -213,12 +211,12 @@ export default function ProductPage() {
         <form className="grid grid-cols-1 md:grid-cols-2 gap-6 px-0">
           <input
             placeholder="Full Name"
-            className="border border-gray-300 px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6A6F3C]"
+            className="border border-gray-300 px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#886c46]"
           />
 
           <input
             placeholder="Phone / Email"
-            className="border border-gray-300 px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6A6F3C]"
+            className="border border-gray-300 px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#886c46]"
           />
 
           <div className="md:col-span-2">
@@ -226,7 +224,7 @@ export default function ProductPage() {
               Select the product you{`'`}re interested in
             </label>
 
-            <select className="w-full border border-gray-300 px-3 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6A6F3C]">
+            <select className="w-full border border-gray-300 px-3 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#886c46]">
               <option>Luxury Modular Bed</option>
               <option>Wardrobe</option>
               <option>Sofa</option>
@@ -237,9 +235,9 @@ export default function ProductPage() {
           <button
             type="submit"
             className="md:col-span-2
-                       bg-[#6A6F3C] text-white
+                       bg-[#886c46] text-white
                        py-4 rounded-2xl font-medium
-                       hover:bg-[#585C32] transition"
+                       hover:bg-[#886c46] transition"
           >
             Request Callback
           </button>

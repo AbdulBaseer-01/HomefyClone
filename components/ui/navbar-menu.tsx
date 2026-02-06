@@ -48,7 +48,7 @@ export const MenuItem = ({
       <button
         type="button"
         onClick={() => setActive(isOpen ? null : item)}
-        className="flex items-center gap-1 px-4 text-white hover:opacity-[0.9] cursor-pointer"
+        className="flex items-center gap-1 px-4 text-[#c09a65] font-bold hover:opacity-[0.9] cursor-pointer"
       >
         <span>{item}</span>
 
@@ -62,7 +62,6 @@ export const MenuItem = ({
         </motion.span>
       </button>
 
-      {/* DROPDOWN */}
       {isOpen && (
         <motion.div
           initial={{ opacity: 0, scale: 0.9, y: 8 }}
@@ -138,7 +137,7 @@ export const HoveredLink = ({
   return (
     <a
       {...rest}
-      className="text-neutral-700 dark:text-neutral-200 hover:text-black"
+      className="text-black dark:text-neutral-200 hover:text-black"
     >
       {children}
     </a>

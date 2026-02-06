@@ -13,7 +13,7 @@ export default function VisitUs() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
         
         <div>
-          <p className="text-sm uppercase tracking-widest text-black/50 mb-6">
+          <p className="text-sm uppercase tracking-widest text-[#886c46] mb-6">
             Visit our office
           </p>
 
@@ -52,8 +52,7 @@ export default function VisitUs() {
           </div>
         </div>
 
-        {/* MAP */}
-        <div className="relative h-115 w-full rounded-3xl overflow-hidden border border-white/10">
+        {/* <div className="relative h-115 w-full rounded-3xl overflow-hidden border border-white/10">
           <iframe
             title="Homefy Interio Office Location"
             src="https://www.google.com/maps?q=Homefy%20Interio%20Hyderabad&output=embed"
@@ -61,12 +60,56 @@ export default function VisitUs() {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
-        </div>
+        </div> */}
+        <form
+          className="bg-white rounded-2xl p-8 shadow-lg space-y-6"
+        >
+          <h2
+            className="text-2xl font-semibold text-black"
+          >
+            Send Us a Message
+          </h2>
+
+          <input
+            type="text"
+            placeholder="Your Name"
+            className="w-full rounded-lg border border-black/20 px-4 py-3 focus:outline-none focus:ring-1 focus:ring-black"
+          />
+
+          <input
+            
+            type="email"
+            placeholder="Your Email"
+            className="w-full rounded-lg border border-black/20 px-4 py-3 focus:outline-none focus:ring-1 focus:ring-black"
+          />
+
+          <input
+            
+            type="text"
+            placeholder="Phone Number"
+            className="w-full rounded-lg border border-black/20 px-4 py-3 focus:outline-none focus:ring-1 focus:ring-black"
+          />
+
+          <textarea
+            
+            placeholder="Tell us about your requirement..."
+            rows={5}
+            className="w-full rounded-lg border border-black/20 px-4 py-3 focus:outline-none focus:ring-1 focus:ring-black"
+          />
+
+          <button
+            
+            type="submit"
+            
+            className="w-full rounded-lg bg-[#886c46] text-white py-3 font-medium hover:bg-[#886c46]/90 transition"
+          >
+            Submit Enquiry
+          </button>
+        </form>
       </div>
 
-      {/* CLOSING LINE */}
       <div className="mt-20 text-center">
-        <p className="text-sm text-black/40">
+        <p className="text-sm text-[#886c46]">
           Appointments recommended for detailed discussions.
         </p>
       </div>

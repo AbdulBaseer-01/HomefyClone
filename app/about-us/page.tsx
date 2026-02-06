@@ -1,10 +1,11 @@
-"use client";
-
-import Navbar from "@/components/Navbar";
+"use client"
 import { TimelineSection } from "@/components/Timeline";
 import { motion } from "motion/react";
 import Image from "next/image";
 
+import { Playfair_Display } from "next/font/google";
+
+const playfair = Playfair_Display({ subsets: ["latin"] });
 const container = {
   hidden: { opacity: 0.9 },
   show: {
@@ -23,7 +24,6 @@ export default function AboutUsPage() {
     <section
       className="min-h-screen bg-[#EFEDE8] px-6 md:px-16 py-20"
     >
-      <Navbar />
       <motion.div
         variants={container}
         initial="hidden"
@@ -32,7 +32,7 @@ export default function AboutUsPage() {
       >
         <motion.h1
           variants={item}
-          className="text-4xl md:text-5xl font-bold text-black"
+          className={`${playfair.className} text-4xl md:text-6xl font-semibold pb-4 bg-linear-to-r from-black via-[#886c46] to-black bg-clip-text text-transparent mb-4`}
         >
           Designing Homes. <br /> Building Trust.
         </motion.h1>
@@ -79,14 +79,14 @@ export default function AboutUsPage() {
     >
       <motion.p
         variants={item}
-        className="uppercase tracking-widest text-xs text-black/50 mb-4"
+        className="uppercase tracking-widest text-xs text-[#886c46] mb-4"
       >
         Our Journey
       </motion.p>
 
       <motion.h2
         variants={item}
-        className="text-4xl md:text-5xl font-semibold text-black leading-tight mb-8"
+        className={`${playfair.className} text-4xl md:text-5xl font-semibold pb-4 bg-linear-to-r from-black via-[#886c46] to-black bg-clip-text text-transparent mb-4`}
       >
         Designing homes
         <br />
@@ -153,7 +153,7 @@ export default function AboutUsPage() {
         <motion.div variants={item}>
           <motion.h2
             variants={item}
-            className="text-3xl font-semibold text-black"
+            className="text-3xl font-semibold text-[#886c46]"
           >
             Meet the Founder
           </motion.h2>
@@ -199,7 +199,7 @@ export default function AboutUsPage() {
           >
             <motion.p
               variants={item}
-              className="text-3xl font-bold text-black"
+              className="text-3xl font-bold text-[#886c46]"
             >
               {stat.value}
             </motion.p>

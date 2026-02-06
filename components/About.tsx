@@ -20,7 +20,7 @@ export function CardStackDemo() {
         className={`${playfair.className} text-4xl md:text-6xl font-semibold bg-linear-to-r from-black via-[#886c46] to-black bg-clip-text text-transparent mb-4`}
       >
         How We{" "}
-        <span className="text-[#ba720e]">Simplify</span> Your <br />
+        <span className="text-[#886c46]">Simplify</span> Your <br />
         Furnishing Experience
       </motion.h2>
 
@@ -48,7 +48,7 @@ export const Highlight = ({
   return (
     <span
       className={cn(
-        "font-bold bg-[#EFEDE8] text-[#6A6F3C] px-1 py-0.5",
+        "font-bold bg-[#EFEDE8] text-[#886c46] px-1 py-0.5",
         className
       )}
     >

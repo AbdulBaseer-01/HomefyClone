@@ -1,10 +1,8 @@
-"use client";
-
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import Navbar from "@/components/Navbar";
 
 const PRODUCTS = [
   {
@@ -48,23 +46,21 @@ const PRODUCTS = [
 export default function ProductsPage() {
   return (
     <main className="bg-[#F8F7F4] text-[#1C1C1C]">
-      <Navbar />
       <section className="px-6 md:px-10 py-20 bg-[#F8F7F4]">
         <div className="max-w-7xl mx-auto mt-16">
-          {/* HEADER */}
+          
           <div className="mx-auto mb-20 text-center">
-            <p className="uppercase tracking-widest text-sm text-[#6a6f3c] mb-1">
+            <p className="uppercase tracking-widest text-sm text-[#886c46] mb-1 font-bold">
               Our Products
             </p>
-            <h2 className="text-4xl md:text-5xl text-[#1c1c1c] font-semibold mb-4">
+            <h2 className="text-4xl md:text-5xl bg-linear-to-r from-black via-[#886c46] to-black bg-clip-text text-transparent font-semibold mb-4">
               Made for everyday Indian homes
             </h2>
-            <p className="text-black/60 max-w-2xl mx-auto">
+            <p className="text-[#000010] max-w-2xl mx-auto">
               Simple, strong and beautiful solutions for comfort and style.
             </p>
           </div>
 
-          {/* PRODUCTS GRID */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-10">
             {PRODUCTS.map((p, i) => (
               <motion.div
@@ -92,7 +88,7 @@ export default function ProductsPage() {
 
                   <Link
                     href={p.href}
-                    className="inline-block w-full text-center px-3 py-2 bg-[#6a6f3c] text-[#F8F7F4] border border-[#434a03] rounded-2xl hover:bg-[#585C32] transition"
+                    className="inline-block w-full text-center px-3 py-2 bg-[#886c46] text-[#F8F7F4] border border-[#434a03] rounded-2xl hover:bg-[#886c46de] transition"
                   >
                     See Designs
                   </Link>
@@ -111,8 +107,8 @@ export default function ProductsPage() {
           <Link
             href="/services"
             className="inline-flex items-center gap-2 px-8 py-3 rounded-2xl 
-                      bg-[#6a6f3c] text-[#F8F7F4] border border-[#434a03]
-                      hover:bg-[#585C32] transition mt-6"
+                      bg-[#886c46] text-[#F8F7F4] border border-[#434a03]
+                      hover:bg-[#886c46de] transition mt-6"
           >
             View All Services <ArrowRight size={16} />
           </Link>

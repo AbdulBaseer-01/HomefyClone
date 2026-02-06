@@ -1,11 +1,11 @@
-"use client";
-
+"use client"
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight, Play } from "lucide-react";
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
+import { Playfair_Display } from "next/font/google";
 
+const playfair = Playfair_Display({ subsets: ["latin"] });
 const VLOGS = [
   {
     id: 1,
@@ -55,20 +55,19 @@ export default function VlogsPage() {
 
   return (
     <main className="bg-black text-white ">
-      <Navbar />
       <div className="max-w-7xl mx-auto md:px-8 py-16 md:py-32 px-4">
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="max-w-2xl mb-12 md:mb-20"
+          className="max-w-4xl mb-12 md:mb-20"
         >
-          <p className="uppercase tracking-widest text-xs md:text-sm text-[#A3A86B] mb-4">
+          <p className="uppercase tracking-widest text-xs md:text-sm text-[#c09a65] mb-4 font-bold">
             Video Stories
           </p>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-6">
-            Real projects. <br /> Real execution.
+          <h1 className={`${playfair.className} text-4xl md:text-6xl font-semibold bg-linear-to-r from-white via-[#886c46] to-white bg-clip-text text-transparent mb-4`}>
+            Real projects. Real execution.
           </h1>
           <p className="text-white/70 text-base md:text-lg">
             Watch how our interiors come to life — from site visits to final
@@ -119,7 +118,7 @@ export default function VlogsPage() {
                 {featured.description}
               </p>
 
-              <span className="text-xs md:text-sm text-[#A3A86B] hover:underline">
+              <span className="text-xs md:text-sm text-[#c09a65] hover:underline">
                 {featured.tag} → Watch on YouTube
               </span>
             </div>
@@ -165,7 +164,7 @@ export default function VlogsPage() {
                     {vlog.description}
                   </p>
 
-                  <span className="text-xs text-[#A3A86B] hover:underline">
+                  <span className="text-xs text-[#c09a65] hover:underline">
                     {vlog.tag} → YouTube
                   </span>
                 </div>
@@ -175,7 +174,7 @@ export default function VlogsPage() {
         </div>
         <div>
           <div className="mt-16 md:mt-24 text-center">
-            <p className="text-xs uppercase tracking-widest text-[#6a6f3c] mb-2">
+            <p className="text-xs uppercase tracking-widest text-[#886c46] mb-2">
               Explore more
             </p>
 
@@ -186,8 +185,8 @@ export default function VlogsPage() {
             <Link
               href="/blogs"
               className="inline-flex items-center gap-2 px-6 md:px-7 py-2 md:py-3 rounded-xl 
-                        bg-[#6a6f3c] text-[#F8F7F4] text-xs md:text-sm
-                        hover:bg-[#585C32] transition"
+                        bg-[#886c46] text-[#F8F7F4] text-xs md:text-sm
+                        hover:bg-[#886c46d0] transition"
             >
               View All Blogs <ArrowRight size={14} />
             </Link>

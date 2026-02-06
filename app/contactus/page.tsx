@@ -1,9 +1,9 @@
-"use client";
-
+"use client"
 import { motion } from "motion/react";
 import { Phone, Mail, MapPin } from "lucide-react";
-import Navbar from "@/components/Navbar";
+import { Playfair_Display } from "next/font/google";
 
+const playfair = Playfair_Display({ subsets: ["latin"] });
 const container = {
   hidden: { opacity: 0 },
   show: {
@@ -22,20 +22,19 @@ export default function ContactUsPage() {
     <section
       className="min-h-screen bg-[#EFEDE8] "
     >
-      <Navbar />
       <motion.div variants={item} className="max-w-4xl mx-auto text-center px-6 md:px-16 py-20">
         <motion.h1
           variants={container}
           initial="hidden"
           animate="show"
-          className="text-4xl md:text-5xl font-bold text-black"
+          className={`${playfair.className} text-4xl md:text-6xl font-semibold pb-4 bg-linear-to-r from-black via-[#886c46] to-black bg-clip-text text-transparent mb-4`}
         >
           Let’s Build Something Beautiful
         </motion.h1>
 
         <motion.p
           variants={item}
-          className="mt-4 text-black/70 text-lg"
+          className="mt-4 text-black/90 text-lg"
         >
           Whether it’s a complete interior, custom furniture, or a simple
           consultation — we’re just a message away.
@@ -59,7 +58,7 @@ export default function ContactUsPage() {
 
           <motion.div variants={item} className="flex items-start gap-4">
             <motion.span variants={item}>
-              <Phone className="text-black" />
+              <Phone className="text-[#886c46]" />
             </motion.span>
             <motion.div variants={item}>
               <p className="font-medium text-black">Phone</p>
@@ -69,7 +68,7 @@ export default function ContactUsPage() {
 
           <motion.div variants={item} className="flex items-start gap-4">
             <motion.span variants={item}>
-              <Mail className="text-black" />
+              <Mail className="text-[#886c46]" />
             </motion.span>
             <motion.div variants={item}>
               <p className="font-medium text-black">Email</p>
@@ -79,7 +78,7 @@ export default function ContactUsPage() {
 
           <motion.div variants={item} className="flex items-start gap-4">
             <motion.span variants={item}>
-              <MapPin className="text-black" />
+              <MapPin className="text-[#886c46]" />
             </motion.span>
             <motion.div variants={item}>
               <p className="font-medium text-black">Studio Address</p>
@@ -142,7 +141,7 @@ export default function ContactUsPage() {
             type="submit"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
-            className="w-full rounded-lg bg-[#6A6F3C] text-white py-3 font-medium hover:bg-[#6A6F3C]/90 transition"
+            className="w-full rounded-lg bg-[#886c46] text-white py-3 font-medium hover:bg-[#886c46]/90 transition"
           >
             Submit Enquiry
           </motion.button>

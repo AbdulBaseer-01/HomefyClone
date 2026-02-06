@@ -101,7 +101,6 @@ export default function OurProducts() {
               transition={{ duration: 0.4 }}
               className="min-w-[320px] h-96 shrink-0 rounded-3xl overflow-hidden relative group cursor-pointer"
             >
-              {/* Image */}
               <Image
                 src={p.image}
                 alt={p.name}
@@ -109,12 +108,10 @@ export default function OurProducts() {
                 className="object-cover group-hover:scale-110 transition duration-700"
               />
 
-              {/* Gradient */}
-              <div className="absolute inset-0 bg-linear-to-br from-black/10 via-black/30 to-black/60
+              <div className="absolute inset-0 bg-linear-to-br from-black/40 via-black/50 to-black/70
                               group-hover:from-black/40 group-hover:via-black/60 group-hover:to-black/90
                               transition duration-700" />
 
-              {/* Content */}
               <div className="absolute inset-0 p-8 flex flex-col justify-between">
                 <span className="px-4 py-2 bg-[#d7a661] text-black text-xs font-bold rounded-full w-fit">
                   PREMIUM

@@ -69,7 +69,10 @@ export default function Hero() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.35 }}
-            className="text-3xl md:text-5xl font-semibold text-[#efede8] leading-tight mb-6"
+            // className="text-3xl md:text-5xl font-semibold text-[#efede8] leading-tight mb-6"
+            className="bg-linear-to-r from-[#886c46] via-[#b79a6f] to-[#efe6d8] 
+bg-clip-text text-transparent text-3xl md:text-5xl font-semibold mb-6"
+
           >
             Quality interiors designed
             <br />
@@ -105,9 +108,6 @@ export default function Hero() {
   );
 }
 
-/* ------------------------------------------
-   Magnetic Button Component
-------------------------------------------- */
 
 function MagneticButton({
   href,
@@ -135,7 +135,7 @@ function MagneticButton({
         ${
           primary
             ? "bg-[#886c46] backdrop-blur border border-white/30 text-white hover:bg-[#85602c]"
-            : "border border-[#896129] text-white hover:bg-[#585C32]"
+            : "border border-[#896129] text-white hover:bg-[#85602c]"
         }`}
       >
         {children}

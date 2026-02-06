@@ -1,10 +1,11 @@
 "use client";
 
-import Navbar from "@/components/Navbar";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
+import { Playfair_Display } from "next/font/google";
 
+const playfair = Playfair_Display({ subsets: ["latin"] });
 const FILTERS = [
   "All",
   "Living Room",
@@ -71,7 +72,6 @@ export default function InspirationGalleryPage() {
 
   return (
     <main className="bg-[#F8F7F4] ">
-      <Navbar />
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-32">
 
         <motion.div
@@ -80,13 +80,13 @@ export default function InspirationGalleryPage() {
           transition={{ duration: 0.6 }}
           className="max-w-2xl mb-20"
         >
-          <p className="uppercase tracking-widest text-sm text-[#6A6F3C] mb-4">
+          <p className="uppercase tracking-widest text-sm text-[#886c46] mb-4">
             Inspiration Gallery
           </p>
-          <h1 className="text-4xl md:text-5xl font-semibold text-[#1C1C1C] mb-6">
+          <h1 className={`${playfair.className} text-4xl md:text-6xl font-semibold pb-4 bg-linear-to-r from-black via-[#886c46] to-black bg-clip-text text-transparent mb-4`}>
             Spaces we’ve brought to life
           </h1>
-          <p className="text-[#6B6B6B] text-lg">
+          <p className="text-[#000010] text-lg">
             Explore real interiors designed and executed for Indian homes and
             workspaces.
           </p>
@@ -105,7 +105,7 @@ export default function InspirationGalleryPage() {
               className={`px-5 py-2 rounded-full text-sm font-medium transition
                 ${
                   activeFilter === filter
-                    ? "bg-[#6A6F3C] text-white"
+                    ? "bg-[#886c46] text-white"
                     : "bg-white border border-[#D6D3CC] text-[#1C1C1C] hover:bg-[#EFEDE8]"
                 }`}
             >

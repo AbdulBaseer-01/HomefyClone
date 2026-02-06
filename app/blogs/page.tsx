@@ -1,11 +1,12 @@
-"use client";
+"use client"
 
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import Navbar from "@/components/Navbar";
+import { Playfair_Display } from "next/font/google";
 
+const playfair = Playfair_Display({ subsets: ["latin"] });
 const BLOGS = [
   {
     id: 1,
@@ -69,7 +70,6 @@ export default function BlogsPage() {
 
   return (
     <section className="bg-[#F8F7F4] min-h-screen ">
-      <Navbar />
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-28">
 
         <motion.div
@@ -78,10 +78,10 @@ export default function BlogsPage() {
           variants={fadeUp}
           className="mb-20 max-w-3xl"
         >
-          <p className="text-sm uppercase tracking-widest text-[#6A6F3C] mb-3">
+          <p className="text-sm uppercase tracking-widest text-[#886c46] mb-3">
             Our Journal
           </p>
-          <h1 className="text-4xl md:text-5xl font-semibold text-[#1C1C1C] mb-6">
+          <h1 className={`${playfair.className} text-4xl md:text-6xl font-semibold pb-4 bg-linear-to-r from-black via-[#886c46] to-black bg-clip-text text-transparent mb-4`}>
             Thoughts on design,<br />spaces & living
           </h1>
           <p className="text-[#6B6B6B] text-lg">
@@ -112,16 +112,16 @@ export default function BlogsPage() {
               </div>
 
               <div className="p-10">
-                <p className="text-sm uppercase tracking-wider text-[#6A6F3C] mb-3">
+                <p className="text-sm uppercase tracking-wider text-[#886c46] mb-3">
                   Featured · {featured.category}
                 </p>
-                <h2 className="text-3xl font-semibold mb-4">
+                <h2 className="text-3xl font-semibold mb-4 text-[#886c46]">
                   {featured.title}
                 </h2>
-                <p className="text-black/70 mb-6">
+                <p className="text-black/90 mb-6">
                   {featured.excerpt}
                 </p>
-                <p className="text-sm text-black/50">
+                <p className="text-sm text-black">
                   {featured.date}
                 </p>
               </div>
@@ -129,7 +129,6 @@ export default function BlogsPage() {
           </Link>
         </motion.div>
 
-        {/* BLOG GRID */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {rest.map((blog, i) => (
             <motion.div
@@ -156,19 +155,19 @@ export default function BlogsPage() {
                   </div>
 
                   <div className="p-6 flex flex-col flex-1">
-                    <p className="text-xs uppercase tracking-wider text-[#6A6F3C] mb-2">
+                    <p className="text-xs uppercase tracking-wider text-[#886c46] mb-2">
                       {blog.category}
                     </p>
 
-                    <h3 className="text-xl font-semibold mb-3 leading-snug">
+                    <h3 className="text-xl font-semibold mb-3 leading-snug text-[#886c46]">
                       {blog.title}
                     </h3>
 
-                    <p className="text-black/70 mb-6 flex-1">
+                    <p className="text-black/90 mb-6 flex-1">
                       {blog.excerpt}
                     </p>
 
-                    <p className="text-sm text-black/50">
+                    <p className="text-sm text-black">
                       {blog.date}
                     </p>
                   </div>
@@ -178,7 +177,7 @@ export default function BlogsPage() {
           ))}
         </div>
         <div className="mt-24 text-center">
-            <p className="text-xs uppercase tracking-widest text-[#6a6f3c] mb-2">
+            <p className="text-xs uppercase tracking-widest text-[#886c46] mb-2">
               Explore more
             </p>
 
@@ -189,8 +188,8 @@ export default function BlogsPage() {
             <Link
               href="/vlogs"
               className="inline-flex items-center gap-2 px-7 py-3 rounded-xl 
-                        bg-[#6a6f3c] text-[#F8F7F4] text-sm
-                        hover:bg-[#585C32] transition"
+                        bg-[#886c46] text-[#F8F7F4] text-sm
+                        hover:bg-[#886c46d0] transition"
             >
               View All Vlogs <ArrowRight size={14} />
             </Link>

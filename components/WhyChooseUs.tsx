@@ -69,7 +69,7 @@ export default function WhyChooseUs() {
           <p className="text-sm uppercase tracking-widest text-[#886c46] mb-4">
             Why choose us
           </p>
-          <h2 className={`${playfair.className} text-4xl md:text-6xl font-semibold bg-linear-to-r from-black via-[#886c46] to-black bg-clip-text text-transparent mb-4`}>
+          <h2 className={`${playfair.className} text-4xl md:text-6xl font-semibold pb-4 bg-linear-to-r from-black via-[#886c46] to-black bg-clip-text text-transparent mb-4`}>
             Spaces that feel
             <br />
             right — today and tomorrow
