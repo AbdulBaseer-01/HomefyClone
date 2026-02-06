@@ -167,7 +167,7 @@ export default function BlogsSection() {
         <div className="mt-12 md:mt-0 text-center md:hidden">
           <Link
             href="/blogs"
-            className="inline-flex items-center gap-2 text-xs md:text-sm px-4 py-2 bg-[#6a6f3c] text-[#F8F7F4] border-2 border-[#434a03] rounded-xl md:rounded-2xl hover:bg-[#585C32] hover:text-white transition"
+            className="inline-flex items-center gap-2 text-xs md:text-sm px-4 py-2 bg-[#886c46] text-[#F8F7F4] border-2 border-[#434a03] rounded-xl md:rounded-2xl hover:bg-[#886c46d0] hover:text-white transition"
           >
             View all blogs <ArrowRight size={16} />
           </Link>
