@@ -51,10 +51,9 @@ export default function OurProducts() {
 
   return (
     <section className="py-32 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 md:px-10">
+      <div className="max-w-7xl mx-auto md:px-10">
 
-        {/* Heading */}
-        <div className="flex items-end justify-between mb-14">
+        <div className="flex items-end justify-between mb-14 md:text-left text-center px-2">
           <div>
             <p className="uppercase tracking-widest text-sm text-[#886c46] mb-2">
               Products
@@ -89,17 +88,16 @@ export default function OurProducts() {
           <ArrowRight size={18} />
         </button>
 
-        {/* Product rail */}
         <div
           ref={railRef}
-          className="flex gap-8 overflow-x-hidden scroll-smooth scrollbar-hide py-4 px-12"
+          className="flex gap-8 overflow-x-hidden scroll-smooth scrollbar-hide py-4 md:px-12 px-4"
         >
           {PRODUCTS.map((p, i) => (
             <motion.div
               key={i}
               whileHover={{ y: -10 }}
               transition={{ duration: 0.4 }}
-              className="min-w-[320px] h-96 shrink-0 rounded-3xl overflow-hidden relative group cursor-pointer"
+              className="min-w-70 md:min-w-75 h-96 shrink-0 rounded-3xl overflow-hidden relative group cursor-pointer"
             >
               <Image
                 src={p.image}

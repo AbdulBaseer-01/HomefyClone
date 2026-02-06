@@ -64,12 +64,12 @@ export default function WhyChooseUs() {
           exit={{ opacity: 0, y: -60 }}
           viewport={{ once: false, margin: "-120px" }}
           transition={{ duration: 0.9, ease: "easeOut" }}
-          className="md:mb-24 mb-6 max-w-4xl"
+          className="md:mb-24 mb-6 max-w-screen"
         >
-          <p className="text-sm uppercase tracking-widest text-[#886c46] mb-4">
+          <p className="text-sm uppercase tracking-widest text-center md:text-left text-[#886c46] mb-4">
             Why choose us
           </p>
-          <h2 className={`${playfair.className} text-4xl md:text-6xl font-semibold pb-4 bg-linear-to-r from-black via-[#886c46] to-black bg-clip-text text-transparent mb-4`}>
+          <h2 className={`${playfair.className} text-4xl md:text-6xl font-semibold pb-4 bg-linear-to-r from-black via-[#886c46] text-center md:text-left to-black bg-clip-text text-transparent mb-4`}>
             Spaces that feel
             <br />
             right — today and tomorrow

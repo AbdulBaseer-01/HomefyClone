@@ -9,7 +9,7 @@ const playfair = Playfair_Display({ subsets: ["latin"] });
 
 export function CardStackDemo() {
   return (
-    <section className="mt-8 px-4 md:px-6 lg:px-8 overflow-hidden">
+    <section className="mt-8  md:px-6 lg:px-8 overflow-hidden">
       
       <motion.h2
         initial={{ y: 0 }}
@@ -17,10 +17,10 @@ export function CardStackDemo() {
         exit={{ opacity: 0.1 }}
         viewport={{ once: false, margin: "-120px" }}
         transition={{ duration: 0.9, ease: "easeOut" }}
-        className={`${playfair.className} text-4xl md:text-6xl font-semibold bg-linear-to-r from-black via-[#886c46] to-black bg-clip-text text-transparent mb-4`}
+        className={`${playfair.className} text-4xl px-2 md:text-left text-center md:text-6xl font-semibold bg-linear-to-r from-black via-[#886c46] to-black bg-clip-text text-transparent mb-4`}
       >
         How We{" "}
-        <span className="text-[#886c46]">Simplify</span> Your <br />
+        Simplify Your
         Furnishing Experience
       </motion.h2>
 
@@ -30,7 +30,7 @@ export function CardStackDemo() {
         exit={{ opacity: 0, scale: 0.97 }}
         viewport={{ once: false }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="flex items-center justify-center w-full py-8 md:py-12 lg:py-16"
+        className="flex items-center justify-center w-full py-8 mt-8 md:py-12 lg:py-16"
       >
         <CardStack items={CARDS} />
       </motion.div>

@@ -76,23 +76,23 @@ export default function OurPortfolio() {
   return (
     <section
       ref={sectionRef}
-      className="px-6 md:px-10 py-24 bg-[#EFEDE8] overflow-hidden"
+      className=" md:px-10 py-24 bg-[#EFEDE8] overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-screen">
 
         <motion.div
           initial={{ opacity: 0.5, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.9, ease: "easeOut" }}
-          className="mb-16 max-w-3xl"
+          className="mb-16 max-w-screen md:text-left text-center"
         >
           <p className="uppercase tracking-widest text-sm text-[#886c46] mb-3">
             Our Portfolio
           </p>
           <h2 className={`${playfair.className} text-4xl md:text-6xl font-semibold bg-linear-to-r from-black via-[#886c46] to-black bg-clip-text text-transparent mb-4`}>
             Homes we’ve transformed,
-            <br /> families we’ve satisfied
+             families we’ve satisfied
           </h2>
           <p className="text-black/60">
             Every project reflects our commitment to quality,

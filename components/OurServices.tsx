@@ -64,15 +64,15 @@ export default function OurServices() {
           whileInView={{ y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.9 }}
-          className="mb-12 md:mb-20 lg:mb-28 max-w-6xl"
+          className="mb-12 md:mb-20 lg:mb-28 max-w-screen"
         >
-          <p className="text-xs md:text-sm uppercase tracking-widest text-[#e2bb83] mb-4">
+          <p className="text-xs md:text-sm md:text-left text-center uppercase tracking-widest text-[#e2bb83] mb-4">
             Services
           </p>
 
-          <h2 className={`${playfair.className} text-4xl md:text-6xl font-semibold bg-linear-to-r from-[#f8f7f4] via-[#e2bb83] to-[#f8f7f4] bg-clip-text text-transparent mb-4`}>
+          <h2 className={`${playfair.className} text-4xl md:text-6xl md:text-left text-center font-semibold bg-linear-to-r from-[#f8f7f4] via-[#e2bb83] to-[#f8f7f4] bg-clip-text text-transparent mb-4`}>
             What we design
-            <br /> and deliver
+             and deliver
           </h2>
         </motion.div>
 
